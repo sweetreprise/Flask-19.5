@@ -1,0 +1,37 @@
+#board-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    margin: 3rem;
+}
+
+.board-cell {
+    text-align: center;
+    height: 1.5rem;
+    width: 2rem;
+    padding: 0.2em;
+    margin: 0.2em;
+}
+
+#form-container {
+    margin: 3rem;
+}
+
+#success, #error, #score {
+    margin: 2rem;
+    width: 16rem;
+    text-align: center;
+}
+
+#success {
+    background-color: rgba(0, 255, 0, 0.1);
+    color:rgb(35, 125, 59)
+}
+
+#error {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: rgb(214, 43, 43) 
+}

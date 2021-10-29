@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %} FORM 2 {% endblock %}
+{% block content %}
+
+    <!-- displays board -->
+    <div id="board-container">
+        {% for row in board %}
+            {% for letter in row %}
+            <div class="board-cell">{{ letter }}</div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <!-- <button id="restart">Restart</button> -->
+    <div id="display-score">
+        <p>Your highscore is {{ highscore }} in {{ num_plays }} number of plays.</p>
+
+        <p><span id="current-score">
+            Current score: 0
+            <!-- Update this dynamically with JS -->
+        </span></p>
+
+        <p><span id="countdown">
+            Seconds left: 60
+            <!-- Update this dynamically with JS -->
+        </span></p>
+
+        <p><span id="final-score">
+            <!-- Fill this dynamically with JS -->
+        </span></p>
+    </div>
+    
+
+    <!-- form for user guess -->
+    <div id="form-container"> 
+        <form>
+            <label for="guess"></label>
+            <input id="guess" type="text" placeholder="Enter guess here..." name="guess">
+    
+            <button>Enter</button>
+        </form>
+    </div>
+
+    <!-- shows user feedback (using JS) based on guess -->
+    <div id="success"></div>
+    <div id="error"></div>
+
+    <!-- Fill this in dynamically with JS -->
+    <ul id="words"></ul>
+
+{% endblock %}
