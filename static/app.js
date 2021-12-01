@@ -87,26 +87,15 @@ function updateScore(guess_length) {
 
 
 // restarts the setInterval countdown
-// function restartCountdown() {
-//     countdownID = setInterval(countdown, 1000);
-// }
+function restartCountdown() {
+    countdownID = setInterval(countdown, 1000);
+}
 
 
-// click event for restart button; resets score and timer
-// $('#restart').on('click', function(event) {
-    
-//     clearInterval(countdownID);
-//     score = 0;
-//     timeleft = 20;
-
-    
-//     $('#current-score').text(`Current Score: ${score}`).show();
-//     $('#countdown').text(`Seconds left: ${timeleft}`);
-//     $('#final-score').hide();
-//     $('form').show();
-    
-//     restartCountdown();
-// });
+// click event for restart button
+$('#restart').on('click', function(event) {
+    location.reload();
+});
 
 
 
